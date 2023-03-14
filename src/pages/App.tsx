@@ -11,6 +11,7 @@ const WrapperCSS = styled.div`
     flex-direction: column;
     overflow: hidden;
     align-items: center;
+    padding: 0 10px;
 `;
 
 const MainImageCSS = styled.div`

@@ -2,7 +2,7 @@
   "name": "rick-and-morty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sikorskydev.github.io/rick-and-morty/",
+  "homepage": "https://sikorskydev.github.io/rick-and-morty",
   "resolutions": {
     "styled-components": "^5"
   },
@@ -30,11 +30,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "babel src --out-dir dist --extensions \".ts,.tsx\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

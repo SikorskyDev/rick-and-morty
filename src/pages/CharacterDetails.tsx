@@ -130,7 +130,8 @@ const CharacterDetails: React.FC = () => {
     const { id } = useParams();
 
     const { data, isSuccess, isLoading, isError } = useGetCharacterByIdQuery(
-        `${id}`
+        `${id}`,
+        { refetchOnMountOrArgChange: true }
     );
 
     return (

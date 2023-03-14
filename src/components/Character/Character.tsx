@@ -28,10 +28,12 @@ const CharacterAvatarCSS = styled.div`
 `;
 
 const CharacterInfoCSS = styled.div`
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     padding: 12px 16px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
 `;
 
 const CharacterNameCSS = styled.div`

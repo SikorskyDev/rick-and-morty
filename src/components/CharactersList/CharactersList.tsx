@@ -6,6 +6,7 @@ import { useGetCharactersQuery } from "../../redux/charactersApi";
 import { SpinningCircles } from "react-loading-icons";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import { CharacterType } from '../../types/fetchedData';
 
 const CharactersListCSS = styled.div`
     margin-bottom: 168px;
@@ -39,6 +40,9 @@ const CharactersList: React.FC = () => {
         { refetchOnMountOrArgChange: true }
     );
 
+    // Створюємо копію масиву і сортуємо його за іменем
+    const sortedData: CharacterType[] = data ? [...data.results].sort((a, b) => a.name.localeCompare(b.name)) : [];
+
     return (
         <ContainerCSS>
             <CharactersListCSS>
@@ -47,7 +51,7 @@ const CharactersList: React.FC = () => {
                 {isLoading && <SpinningCircles />}
 
                 {isSuccess &&
-                    data.results.map((character) => {
+                    sortedData.map((character) => {
                         return (
                             <Character
                                 key={character.id}
